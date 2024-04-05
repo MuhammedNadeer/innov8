@@ -5,17 +5,23 @@ import { Input } from "../ui/input";
 import { cn } from "@/utils/cn";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie"
+import jsonData from "../../../public/req.json"
+
+
 
 
 export default function SignupFormDemo() {
   const [teamname, setTeamName] = useState("");
+  const [password, setPassword] = useState('');
   const [secretcode, setSecretCode] = useState("");
   const router = useRouter();
+
+  const data: any = jsonData
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Validate credentials (teamname and secretcode)
-    if (teamname != "" && (secretcode === "innov8-coet-6"|| secretcode === "innov8-coet-24")) {
+    if (teamname != "" && (secretcode === "innov8-coet-6"|| secretcode === "innov8-coet-24") && data[teamname] === password) {
       Cookies.set("name",teamname)
       Cookies.set("code",secretcode)
       console.log("validated")
@@ -45,6 +51,10 @@ export default function SignupFormDemo() {
               type="text"
               onChange={(e) => setTeamName(e.target.value)}
             />
+          </LabelInputContainer>
+          <LabelInputContainer className="mb-4">
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" placeholder="••••••••" type="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="password">Secret Code</Label>

@@ -15,11 +15,11 @@ export default function CandidateInstructionsCardBased() {
   const secretcode = Cookies.get("code")
 
   useEffect(() => {
-    setRules(secretcode)
-  }, []);
+    setRules(secretcode || '')
+  }, []);// eslint-disable-line react-hooks/exhaustive-deps
   
 
-  const handleMenuClick = (menu) => {
+  const handleMenuClick = (menu: any) => {
     setActiveMenu(menu);
   };
 
