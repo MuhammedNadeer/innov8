@@ -1,21 +1,31 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/utils/cn";
 import { useRouter } from "next/navigation";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
+import Cookies from "js-cookie"
+
 
 export default function SignupFormDemo() {
+  const [teamname, setTeamName] = useState("");
+  const [secretcode, setSecretCode] = useState("");
   const router = useRouter();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
+    // Validate credentials (teamname and secretcode)
+    if (teamname != "" && (secretcode === "innov8-coet-6"|| secretcode === "innov8-coet-24")) {
+      Cookies.set("name",teamname)
+      Cookies.set("code",secretcode)
+      console.log("validated")
+      router.push("/home")
+    } else {
+      // Handle invalid credentials
+      alert("Invalid credentials");
+    }
   };
+
   return (
     <div className="flex bg-black h-screen items-center">
       <div className="max-w-md w-full h-max mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
@@ -31,21 +41,22 @@ export default function SignupFormDemo() {
             <Input
               id="team-name"
               placeholder="Enter Your Team Name Here"
+              value={teamname}
               type="text"
+              onChange={(e) => setTeamName(e.target.value)}
             />
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
             <Label htmlFor="password">Secret Code</Label>
-            <Input id="password" placeholder="••••••••" type="password" />
+            <Input id="password" placeholder="••••••••" type="password" value={secretcode} onChange={(e)=>setSecretCode(e.target.value)}/>
           </LabelInputContainer>
 
+          
           <button
             className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
             type="submit"
-            onClick={() => router.push("/home")}
-          >
-            Reveal &rarr;
-            <BottomGradient />
+          >Reveal &rarr;
+          <BottomGradient />
           </button>
         </form>
       </div>
