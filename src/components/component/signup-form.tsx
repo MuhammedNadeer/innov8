@@ -6,8 +6,7 @@ import { cn } from "@/utils/cn";
 import { useRouter } from "next/navigation";
 import Cookies from "js-cookie"
 import jsonData from "../../../public/req.json"
-
-
+import { useToast } from '@chakra-ui/react'
 
 
 export default function SignupFormDemo() {
@@ -15,20 +14,33 @@ export default function SignupFormDemo() {
   const [password, setPassword] = useState('');
   const [secretcode, setSecretCode] = useState("");
   const router = useRouter();
+  const toast = useToast()
 
   const data: any = jsonData
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Validate credentials (teamname and secretcode)
-    if (teamname != "" && (secretcode === "innov8-coet-6"|| secretcode === "innov8-coet-24") && data[teamname] === password) {
+    if (data.hasOwnProperty(teamname) && (secretcode === "innov8-coet-6" && data[teamname][data[teamname].length - 1] === "6" || secretcode === "innov8-coet-24" && data[teamname][data[teamname].length - 1] === "4" ) && data[teamname] === password) {
       Cookies.set("name",teamname)
       Cookies.set("code",secretcode)
       console.log("validated")
       router.push("/home")
+      toast({
+        title: 'Verified',
+        description: "Happy Hacking!",
+        status: 'success',
+        duration: 9000,
+        isClosable: true,
+      })
     } else {
-      // Handle invalid credentials
-      alert("Invalid credentials");
+      toast({
+        title: 'Invalid Credentials',
+        description: "Enter the credentials carefully.",
+        status: 'error',
+        duration: 9000,
+        isClosable: true,
+      })
     }
   };
 
@@ -57,8 +69,8 @@ export default function SignupFormDemo() {
             <Input id="password" placeholder="••••••••" type="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
           </LabelInputContainer>
           <LabelInputContainer className="mb-4">
-            <Label htmlFor="password">Secret Code</Label>
-            <Input id="password" placeholder="••••••••" type="password" value={secretcode} onChange={(e)=>setSecretCode(e.target.value)}/>
+            <Label htmlFor="secret">Secret Code</Label>
+            <Input id="secret" placeholder="••••••••" type="password" value={secretcode} onChange={(e)=>setSecretCode(e.target.value)}/>
           </LabelInputContainer>
 
           

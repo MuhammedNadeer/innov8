@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { CardHeader, CardContent, Card } from '@/components/ui/card';
 import { useEffect } from 'react';
 import Cookies from "js-cookie"
+import Confetti from '@/components/component/confetti';
 
 
 export default function CandidateInstructionsCardBased() {
@@ -43,7 +44,9 @@ export default function CandidateInstructionsCardBased() {
         </div>
       </div>
     </nav>
+    <Confetti />
     <div className="flex bg-gray-800 flex-col min-h-screen">
+    
         {(activeMenu === "rules" && rule === "innov8-coet-24") && <><main
           className="flex-1 grid min-h-[600px] gap-6 px-4 text-base lg:gap-10 lg:px-6 xl:min-h-[800px]"
           style={{ marginTop: '70px' }}
