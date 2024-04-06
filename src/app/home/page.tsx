@@ -205,7 +205,7 @@ export default function CandidateInstructionsCardBased() {
               <p className="text-gray-100 ml-1 dark:text-gray-400">Problem Statements are given below</p>
             </div>
             <div className="space-y-4">
-              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }}>
+              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)'}}>
                 <CardHeader>
                   <div>Problem Statement 1</div>
                 </CardHeader>
@@ -217,7 +217,7 @@ export default function CandidateInstructionsCardBased() {
                   </ol>
                 </CardContent>
               </Card>
-              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }}>
+              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }} className='mt-4'>
                 <CardHeader>
                   <div>Problem Statement 2</div>
                 </CardHeader>
@@ -229,7 +229,7 @@ export default function CandidateInstructionsCardBased() {
                   </ol>
                 </CardContent>
               </Card>
-              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }}>
+              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }} className='mt-4'>
                 <CardHeader>
                   <div>Open Track</div>
                 </CardHeader>
@@ -282,7 +282,7 @@ export default function CandidateInstructionsCardBased() {
                   <ol className="ml-4 space-y-2">
                     <li>Click the button to fill Idea Submission Form</li>
                   </ol>
-                  <a href="https://forms.gle/txEHzxvPDH9QvLRw5" target="_blank"><button className="ml-4 mt-2 bg-transparent hover:bg-gray-800 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
+                  <a href="https://forms.gle/txEHzxvPDH9QvLRw5" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
               </Card>
             </div>
@@ -295,7 +295,7 @@ export default function CandidateInstructionsCardBased() {
                   <ol className="ml-4 space-y-2">
                     <li>Click the button to fill Idea Submission Form</li>
                   </ol>
-                  <a href="https://forms.gle/gPEfYaCaQthbyjUF8" target="_blank"><button className="ml-4 mt-2 bg-transparent hover:bg-gray-800 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
+                  <a href="https://forms.gle/gPEfYaCaQthbyjUF8" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
               </Card>
             </div>
@@ -330,7 +330,7 @@ export default function CandidateInstructionsCardBased() {
                   <ol className="ml-4 space-y-2">
                     <li>Click the button to fill Idea Submission Form</li>
                   </ol>
-                  <a href="https://forms.gle/9oNQpJiBSyXY6o5Z8" target="_blank"><button className="ml-4 mt-2 bg-transparent hover:bg-gray-800 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
+                  <a href="https://forms.gle/9oNQpJiBSyXY6o5Z8" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
               </Card>
             </div>
@@ -343,7 +343,7 @@ export default function CandidateInstructionsCardBased() {
                   <ol className="ml-4 space-y-2">
                     <li>Click the button to fill Idea Submission Form</li>
                   </ol>
-                  <a href="https://forms.gle/5H28YskkLdAYkirh6" target="_blank"><button className="ml-4 mt-2 bg-transparent hover:bg-gray-800 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
+                  <a href="https://forms.gle/5H28YskkLdAYkirh6" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
               </Card>
             </div>
