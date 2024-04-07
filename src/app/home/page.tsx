@@ -195,7 +195,7 @@ export default function CandidateInstructionsCardBased() {
             </div>
           </div></>}
 
-        {activeMenu==="problem"&&<><main
+        {(activeMenu==="problem" && rule === "innov8-coet-24") &&<><main
           className="flex-1 grid min-h-[600px] gap-6 px-4 text-base lg:gap-10 lg:px-6 xl:min-h-[800px]"
           style={{ marginTop: '70px' }}
         >
@@ -205,39 +205,85 @@ export default function CandidateInstructionsCardBased() {
               <p className="text-gray-100 ml-1 dark:text-gray-400">Problem Statements are given below</p>
             </div>
             <div className="space-y-4">
-              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)'}}>
-                <CardHeader>
-                  <div>Problem Statement 1</div>
-                </CardHeader>
-                <CardContent>
-                  <ol className="list-disc ml-4 space-y-2">
-                    <li>The problem statements and their descriptions will be accessible under the "Problem Statements" tab.</li>
-                    <li>At 10:00 AM, the form for idea submission will be closed for all participants. Late submissions will not be considered,so make sure you submit your ideas on time.</li>
-                    <li>The form will be available at the "Form Submission" tab.</li>
-                  </ol>
-                </CardContent>
-              </Card>
-              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }} className='mt-4'>
-                <CardHeader>
-                  <div>Problem Statement 2</div>
-                </CardHeader>
-                <CardContent>
-                  <ol className="list-disc ml-4 space-y-2">
-                    <li>All presentation documents must be completed and uploaded by 2:30 PM. This includes  pitch deck, hosted vercel link and GitHub repository link.You can find the form located at the bottom of this page.</li>
-                    <li>You can find the form located at "Form Submission" tab.</li>
-                    <li>Ensure that your team has all necessary documents ready and uploaded before the deadline.</li>
-                  </ol>
-                </CardContent>
-              </Card>
               <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }} className='mt-4'>
                 <CardHeader>
                   <div>Open Track</div>
                 </CardHeader>
                 <CardContent>
                   <ol className="list-disc ml-4 space-y-2">
-                    <li>All presentation documents must be completed and uploaded by 2:30 PM. This includes  pitch deck, hosted vercel link and GitHub repository link.You can find the form located at the bottom of this page.</li>
-                    <li>You can find the form located at "Form Submission" tab.</li>
-                    <li>Ensure that your team has all necessary documents ready and uploaded before the deadline.</li>
+                    <li>Select a problem area or domain that resonates with you, and develop innovative solutions using only HTML and CSS.</li>
+                    <li>Dream up ambitious ideas within the constraints of HTML and CSS to push the boundaries of conventional web design.</li>
+                    <li>Consider the impact of your solution on society, the environment, or specific user groups, and prioritize scalable and impactful designs.</li>
+                    <li>Utilize the power of HTML and CSS to create efficient and visually appealing web interfaces.</li>
+                    <li>Collaborate with team members to gain diverse perspectives and insights, enhancing the creativity and effectiveness of your designs.</li>
+                  </ol>
+                </CardContent>
+              </Card>
+              <h2 className='text-white text-2xl font-bold'>Example</h2>
+              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }} className='mt-4'>
+                <CardHeader>
+                <div className='underline underline-offset-8'>Problem Statement: Food Waste Reduction</div>
+                </CardHeader>
+                <CardContent>
+                  <ol className="ml-1 space-y-2">
+                    <li>Create a smart food management system that helps individuals track their food consumption, reduce food waste, and make sustainable food choices by suggesting recipes based on available ingredients and expiration dates.</li>
+                  </ol>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+          </main>
+          <div className="flex mx-auto max-w-3xl mt-6">
+            <div style={{ marginBottom: '100px' }}>
+            <Button
+                className='w-full bg-black text-white hover:bg-gray-900'
+                onClick={() => handleMenuClick("rules")}
+              >
+                Previous
+              </Button>
+              </div>
+              <div style={{ marginBottom: '100px' }}>
+              <Button
+                className='w-full ml-2 bg-black text-white hover:bg-gray-900'
+                onClick={() => handleMenuClick("final")}
+              >
+                Next
+              </Button>
+            </div>
+          </div></>
+        }
+        {(activeMenu==="problem" && rule === "innov8-coet-6")&&<><main
+          className="flex-1 grid min-h-[600px] gap-6 px-4 text-base lg:gap-10 lg:px-6 xl:min-h-[800px]"
+          style={{ marginTop: '70px' }}
+        >
+          <div className="mx-auto max-w-3xl space-y-6">
+            <div className="space-y-2">
+              <h1 className="text-3xl font-bold text-gray-50 tracking-tighter sm:text-5xl">Problem Statements</h1>
+              <p className="text-gray-100 ml-1 dark:text-gray-400">Problem Statements are given below</p>
+            </div>
+            <div className="space-y-4">
+              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }} className='mt-4'>
+                <CardHeader>
+                  <div>Open Track</div>
+                </CardHeader>
+                <CardContent>
+                  <ol className="list-disc ml-4 space-y-2">
+                    <li>Choose a problem area or domain and develop web solutions using HTML and CSS, with backend integration using the OpenAI API.</li>
+                    <li>Dream up ambitious ideas that leverage both frontend and backend technologies to solve complex problems or improve existing processes.</li>
+                    <li>Consider the societal, environmental, or user-specific impact of your solution, prioritizing scalability, sustainability, and real-world effectiveness.</li>
+                    <li>Leverage the power of technology, including HTML, CSS, and the OpenAI API, to drive innovation and efficiency in your solution.</li>
+                    <li>Collaborate with interdisciplinary teams to integrate frontend and backend components seamlessly, ensuring a cohesive and impactful web application.</li>
+                  </ol>
+                </CardContent>
+              </Card>
+              <h2 className='text-white text-2xl font-bold'>Example</h2>
+              <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }} className='mt-4'>
+                <CardHeader>
+                <div className='underline underline-offset-8'>Problem Statement: Food Waste Reduction</div>
+                </CardHeader>
+                <CardContent>
+                  <ol className="ml-1 space-y-2">
+                    <li>Create a smart food management system that helps individuals track their food consumption, reduce food waste, and make sustainable food choices by suggesting recipes based on available ingredients and expiration dates.</li>
                   </ol>
                 </CardContent>
               </Card>
@@ -276,11 +322,11 @@ export default function CandidateInstructionsCardBased() {
             <div className="space-y-2">
             <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }}>
                 <CardHeader>
-                  <div>Idea Submission Form:</div>
+                  <div>Topic Submission Form:</div>
                 </CardHeader>
                 <CardContent>
                   <ol className="ml-4 space-y-2">
-                    <li>Click the button to fill Idea Submission Form</li>
+                    <li>Click the button to fill Topic Submission Form</li>
                   </ol>
                   <a href="https://forms.gle/txEHzxvPDH9QvLRw5" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
@@ -293,7 +339,7 @@ export default function CandidateInstructionsCardBased() {
                 </CardHeader>
                 <CardContent>
                   <ol className="ml-4 space-y-2">
-                    <li>Click the button to fill Idea Submission Form</li>
+                    <li>Click the button to fill Final Submission Form</li>
                   </ol>
                   <a href="https://forms.gle/gPEfYaCaQthbyjUF8" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
@@ -324,11 +370,11 @@ export default function CandidateInstructionsCardBased() {
             <div className="space-y-2">
             <Card style={{ backgroundColor: '#1B1B1B', color: 'white', borderColor: 'rgba(0, 0, 0, 0.2)' }}>
                 <CardHeader>
-                  <div>Idea Submission Form:</div>
+                  <div>Topic Submission Form:</div>
                 </CardHeader>
                 <CardContent>
                   <ol className="ml-4 space-y-2">
-                    <li>Click the button to fill Idea Submission Form</li>
+                    <li>Click the button to fill Topic Submission Form</li>
                   </ol>
                   <a href="https://forms.gle/9oNQpJiBSyXY6o5Z8" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
@@ -341,7 +387,7 @@ export default function CandidateInstructionsCardBased() {
                 </CardHeader>
                 <CardContent>
                   <ol className="ml-4 space-y-2">
-                    <li>Click the button to fill Idea Submission Form</li>
+                    <li>Click the button to fill Final Submission Form</li>
                   </ol>
                   <a href="https://forms.gle/5H28YskkLdAYkirh6" target="_blank"><button className="ml-4 mt-3 bg-transparent hover:bg-gray-800 text-blue-500 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Go to form</button></a>
                 </CardContent>
